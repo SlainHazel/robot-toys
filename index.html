@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function censorText() {
+	var inText, outText;
+
+	inText = document.getElementById("inputText").value;
+
+	if (document.getElementById("shuffleIt").checked) {
+		console.log("fasdf");
+	} else {
+		outText = inText.replace(/\w/g, document.getElementById("repChar").value);
+
+	}
+
+	document.getElementById("outputText").value = outText;
+}
+</script>
+</head>
+
+<body>
+<h1>Text "censor" thing</h1>
+
+<p>Replacement Char: <input id="repChar" type="text" value="*" size="1" maxlength="1"></p>
+<p>Shuffle?: <input id="shuffleIt" type="checkbox"></p>
+
+<h3>input</h3>
+<textarea id="inputText" rows="10" cols="30"></textarea>
+
+<p><button type="button" onclick="censorText()">bottom</button></p>
+
+<h3>output</h3>
+<textarea id="outputText" rows="10" cols="30" readonly></textarea></th>
+</body>
+</html>
